@@ -1,0 +1,111 @@
+Traceback (most recent call last):
+  File "/home/ubuntu13/zsh/code/Aberration_Correction_MIPI-main/fewlens/train.py", line 284, in <module>
+    train_pipeline(root_path)
+  File "/home/ubuntu13/zsh/code/Aberration_Correction_MIPI-main/fewlens/train.py", line 224, in train_pipeline
+    model.optimize_parameters(current_iter)
+  File "/home/ubuntu13/zsh/code/Aberration_Correction_MIPI-main/fewlens/models/restoration_model.py", line 204, in optimize_parameters
+    preds = self.net_g(self.lq)
+  File "/home/ubuntu13/anaconda3/envs/fewlens/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/ubuntu13/anaconda3/envs/fewlens/lib/python3.9/site-packages/torch/nn/parallel/distributed.py", line 1156, in forward
+    output = self._run_ddp_forward(*inputs, **kwargs)
+  File "/home/ubuntu13/anaconda3/envs/fewlens/lib/python3.9/site-packages/torch/nn/parallel/distributed.py", line 1110, in _run_ddp_forward
+    return module_to_run(*inputs[0], **kwargs[0])  # type: ignore[index]
+  File "/home/ubuntu13/anaconda3/envs/fewlens/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/ubuntu13/zsh/code/Aberration_Correction_MIPI-main/fewlens/archs/MIMO_arch.py", line 548, in forward
+    z = self.Decoder[0](z)
+  File "/home/ubuntu13/anaconda3/envs/fewlens/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/ubuntu13/zsh/code/Aberration_Correction_MIPI-main/fewlens/archs/MIMO_arch.py", line 434, in forward
+    return self.layers(x)
+  File "/home/ubuntu13/anaconda3/envs/fewlens/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/ubuntu13/anaconda3/envs/fewlens/lib/python3.9/site-packages/torch/nn/modules/container.py", line 217, in forward
+    input = module(input)
+  File "/home/ubuntu13/anaconda3/envs/fewlens/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/ubuntu13/zsh/code/Aberration_Correction_MIPI-main/fewlens/archs/MIMO_arch.py", line 415, in forward
+    x = x + self.ffn(self.norm2(x))
+  File "/home/ubuntu13/anaconda3/envs/fewlens/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/ubuntu13/zsh/code/Aberration_Correction_MIPI-main/fewlens/archs/MIMO_arch.py", line 338, in forward
+    x = x.reshape(b * self.groups, -1, h, w)
+RuntimeError: shape '[96, -1, 64, 64]' is invalid for input of size 4194304
+Traceback (most recent call last):
+  File "/home/ubuntu13/zsh/code/Aberration_Correction_MIPI-main/fewlens/train.py", line 284, in <module>
+    train_pipeline(root_path)
+  File "/home/ubuntu13/zsh/code/Aberration_Correction_MIPI-main/fewlens/train.py", line 224, in train_pipeline
+    model.optimize_parameters(current_iter)
+  File "/home/ubuntu13/zsh/code/Aberration_Correction_MIPI-main/fewlens/models/restoration_model.py", line 204, in optimize_parameters
+    preds = self.net_g(self.lq)
+  File "/home/ubuntu13/anaconda3/envs/fewlens/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/ubuntu13/anaconda3/envs/fewlens/lib/python3.9/site-packages/torch/nn/parallel/distributed.py", line 1156, in forward
+    output = self._run_ddp_forward(*inputs, **kwargs)
+  File "/home/ubuntu13/anaconda3/envs/fewlens/lib/python3.9/site-packages/torch/nn/parallel/distributed.py", line 1110, in _run_ddp_forward
+    return module_to_run(*inputs[0], **kwargs[0])  # type: ignore[index]
+  File "/home/ubuntu13/anaconda3/envs/fewlens/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/ubuntu13/zsh/code/Aberration_Correction_MIPI-main/fewlens/archs/MIMO_arch.py", line 548, in forward
+    z = self.Decoder[0](z)
+  File "/home/ubuntu13/anaconda3/envs/fewlens/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/ubuntu13/zsh/code/Aberration_Correction_MIPI-main/fewlens/archs/MIMO_arch.py", line 434, in forward
+    return self.layers(x)
+  File "/home/ubuntu13/anaconda3/envs/fewlens/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/ubuntu13/anaconda3/envs/fewlens/lib/python3.9/site-packages/torch/nn/modules/container.py", line 217, in forward
+    input = module(input)
+  File "/home/ubuntu13/anaconda3/envs/fewlens/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/ubuntu13/zsh/code/Aberration_Correction_MIPI-main/fewlens/archs/MIMO_arch.py", line 415, in forward
+    x = x + self.ffn(self.norm2(x))
+  File "/home/ubuntu13/anaconda3/envs/fewlens/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/ubuntu13/zsh/code/Aberration_Correction_MIPI-main/fewlens/archs/MIMO_arch.py", line 338, in forward
+    x = x.reshape(b * self.groups, -1, h, w)
+RuntimeError: shape '[96, -1, 64, 64]' is invalid for input of size 4194304
+ERROR:torch.distributed.elastic.multiprocessing.api:failed (exitcode: 1) local_rank: 0 (pid: 13416) of binary: /home/ubuntu13/anaconda3/envs/fewlens/bin/python
+Traceback (most recent call last):
+  File "/home/ubuntu13/anaconda3/envs/fewlens/lib/python3.9/runpy.py", line 197, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/home/ubuntu13/anaconda3/envs/fewlens/lib/python3.9/runpy.py", line 87, in _run_code
+    exec(code, run_globals)
+  File "/home/ubuntu13/anaconda3/envs/fewlens/lib/python3.9/site-packages/torch/distributed/run.py", line 798, in <module>
+    main()
+  File "/home/ubuntu13/anaconda3/envs/fewlens/lib/python3.9/site-packages/torch/distributed/elastic/multiprocessing/errors/__init__.py", line 346, in wrapper
+    return f(*args, **kwargs)
+  File "/home/ubuntu13/anaconda3/envs/fewlens/lib/python3.9/site-packages/torch/distributed/run.py", line 794, in main
+    run(args)
+  File "/home/ubuntu13/anaconda3/envs/fewlens/lib/python3.9/site-packages/torch/distributed/run.py", line 785, in run
+    elastic_launch(
+  File "/home/ubuntu13/anaconda3/envs/fewlens/lib/python3.9/site-packages/torch/distributed/launcher/api.py", line 134, in __call__
+    return launch_agent(self._config, self._entrypoint, list(args))
+  File "/home/ubuntu13/anaconda3/envs/fewlens/lib/python3.9/site-packages/torch/distributed/launcher/api.py", line 250, in launch_agent
+    raise ChildFailedError(
+torch.distributed.elastic.multiprocessing.errors.ChildFailedError: 
+============================================================
+fewlens/train.py FAILED
+------------------------------------------------------------
+Failures:
+[1]:
+  time      : 2025-07-10_03:07:15
+  host      : ubuntu
+  rank      : 1 (local_rank: 1)
+  exitcode  : 1 (pid: 13417)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+------------------------------------------------------------
+Root Cause (first observed failure):
+[0]:
+  time      : 2025-07-10_03:07:15
+  host      : ubuntu
+  rank      : 0 (local_rank: 0)
+
+  exitcode  : 1 (pid: 13416)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+============================================================
+
+
